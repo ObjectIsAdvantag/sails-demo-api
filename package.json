@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "description": "a Sails application",
   "keywords": [],
+  "config": {
+    "DOCKER_BUILD_IMAGE": "ssfartz/sails-demo"
+  },
   "dependencies": {
     "ejs": "~0.8.4",
     "grunt": "0.4.2",
@@ -25,13 +28,15 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "clean": "rm -rf node_modules",
+    "dockerize": "bash ./dockerize.sh"
   },
   "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/anonymous node/sails user/demo.git"
   },
-  "author": "anonymous node/sails user",
+  "author": "stève sfartz",
   "license": ""
 }
